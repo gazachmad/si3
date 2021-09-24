@@ -12,7 +12,9 @@
 |
 */
 
-// require __DIR__.'/../vendor/autoload.php';
+use Dotenv\Dotenv;
+
+require realpath(__DIR__ . '/..') . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +27,7 @@
 | the responses back to the browser and delight our users.
 |
 */
+$dotEnv = Dotenv::createImmutable(realpath(__DIR__ . '/..') . '/');
+$dotEnv->load();
 
-require_once __DIR__.'/../bootstrap/app.php';
+require_once realpath(__DIR__ . '/..') . '/bootstrap/app.php';
