@@ -2,6 +2,6 @@
 
 namespace App\Core;
 
-class Controller extends Core
+class Model extends Core
 {
 }
