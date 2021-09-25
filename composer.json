@@ -12,6 +12,11 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
+		"filp/whoops": "^2.14",
+		"illuminate/database": "^7.30",
+		"illuminate/http": "^7.30",
+		"illuminate/routing": "^7.30",
+		"illuminate/view": "^7.30",
 		"vlucas/phpdotenv": "^5.3"
 	},
 	"suggest": {
@@ -23,7 +28,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "app/"
+			"App\\": "app/",
+			"Lib\\": "libraries/"
 		}
 	}
 }
