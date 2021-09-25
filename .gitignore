@@ -1,12 +1,12 @@
 .DS_Store
 
-application/cache/*
-!application/cache/index.html
+app/cache/*
+!app/cache/index.html
 
-application/logs/*
-!application/logs/index.html
+app/logs/*
+!app/logs/index.html
 
-!application/*/.htaccess
+!app/*/.htaccess
 
 composer.lock
 
@@ -15,6 +15,8 @@ user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
+
+Cache
 
 # IDE Files
 #-------------------------
