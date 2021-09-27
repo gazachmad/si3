@@ -22,6 +22,6 @@ class Welcome extends Controller
 	 */
 	public function index()
 	{
-		static::$view->make('welcome_message');
+		$this->view->render('welcome_message');
 	}
 }

@@ -11,13 +11,13 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class Core extends BaseCore
 {
-    protected static $db;
-    protected static $request;
-    protected static $response;
-    protected static $session;
-    protected static $view;
+    protected $db;
+    protected $request;
+    protected $response;
+    protected $session;
+    protected $view;
 
-    protected static $helpers = ['url'];
+    protected $helpers = ['url'];
 
     public function __construct()
     {
@@ -25,21 +25,21 @@ class Core extends BaseCore
 
         $this->_initialize();
 
-        $this->load->helper(static::$helpers);
+        $this->load->helper($this->helpers);
     }
 
     private function _initialize()
     {
-        static::$db = new DB;
+        $this->db = new DB;
 
         $request = new Request;
-        static::$request = $request->capture();
+        $this->request = $request->capture();
 
-        static::$response = new Response;
+        $this->response = new Response;
 
         $session = new Session;
-        static::$session = $session->start();
+        $this->session = $session->start();
 
-        static::$view = new View;
+        $this->view = new View;
     }
 }

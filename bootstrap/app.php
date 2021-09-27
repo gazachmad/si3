@@ -172,7 +172,7 @@ define('SYSDIR', basename(BASEPATH));
 define('APPPATH', realpath(FCPATH . 'app') . '/');
 
 // The path to the "views" directory
-define('VIEWPATH', realpath(FCPATH . 'resources') . '/');
+define('VIEWPATH', realpath(FCPATH . 'templates') . '/');
 
 /*
  * --------------------------------------------------------------------

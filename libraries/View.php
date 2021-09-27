@@ -27,8 +27,8 @@ class View extends Factory
         });
     }
 
-    public function make($view, $data = [], $mergeData = [])
+    public function render($view, $data = [], $mergeData = [])
     {
-        echo parent::make($view, $data, $mergeData);
+        echo parent::make($view, $data, $mergeData)->render();
     }
 }

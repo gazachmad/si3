@@ -8,7 +8,7 @@ use Illuminate\Events\Dispatcher;
 
 class DB extends Manager
 {
-    private static $config;
+    private $config;
 
     public function __construct()
     {
@@ -19,7 +19,7 @@ class DB extends Manager
 
     private function _initialize()
     {
-        static::$config = [
+        $this->config = [
             'driver'   => $_SERVER['DB_CONNECTION'],
             'host'     => $_SERVER['DB_HOST'],
             'port'     => $_SERVER['DB_PORT'],
@@ -28,7 +28,7 @@ class DB extends Manager
             'password' => $_SERVER['DB_PASSWORD'],
         ];
 
-        $this->addConnection(static::$config);
+        $this->addConnection($this->config);
         $this->setEventDispatcher(new Dispatcher(new Container));
         $this->setAsGlobal();
         $this->bootEloquent();
