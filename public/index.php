@@ -14,7 +14,7 @@
 
 use Dotenv\Dotenv;
 
-require realpath(__DIR__ . '/..') . '/vendor/autoload.php';
+require_once realpath(__DIR__ . '/../vendor') . '/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +30,4 @@ require realpath(__DIR__ . '/..') . '/vendor/autoload.php';
 $dotEnv = Dotenv::createImmutable(realpath(__DIR__ . '/..') . '/');
 $dotEnv->load();
 
-require_once realpath(__DIR__ . '/..') . '/bootstrap/app.php';
+require_once realpath(__DIR__ . '/../bootstrap') . '/app.php';

@@ -181,4 +181,4 @@ define('VIEWPATH', realpath(FCPATH . 'templates') . '/');
  *
  * And away we go...
  */
-require_once BASEPATH . 'core/CodeIgniter.php';
+require_once realpath(BASEPATH . 'core') . '/CodeIgniter.php';
