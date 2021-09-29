@@ -1,5 +1,8 @@
 @extends('admin.layout.app')
 
+@section('pagestyle')
+@endsection
+
 @section('style')
 @endsection
 
@@ -42,6 +45,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('pagescript')
 @endsection
 
 @section('script')

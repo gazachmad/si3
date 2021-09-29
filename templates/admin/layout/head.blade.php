@@ -25,12 +25,11 @@
 
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{base_url('template/app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
+    @yield('pagestyle')
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{base_url('template/assets/css/style.css')}}">
-    <!-- END: Custom CSS-->
-
     @yield('style')
-
+    <!-- END: Custom CSS-->
 </head>
