@@ -3,13 +3,13 @@
 namespace App\Core;
 
 use CI_Controller as BaseCore;
-use Illuminate\Http\Client\Factory;
-use Illuminate\Http\Request;
-use Lib\DB;
-use Lib\Response;
-use Lib\Validation;
-use Lib\View;
-use Symfony\Component\HttpFoundation\Session\Session;
+use Packages\DB;
+use Packages\Http;
+use Packages\Request;
+use Packages\Response;
+use Packages\Session;
+use Packages\Validation;
+use Packages\View;
 
 class Core extends BaseCore
 {
@@ -35,16 +35,14 @@ class Core extends BaseCore
     private function _initialize()
     {
         $this->db         = new DB;
-        
-        $this->http       = new Factory;
 
-        $request          = new Request;
-        $this->request    = $request->capture();
+        $this->http       = new Http;
+
+        $this->request    = Request::capture();
 
         $this->response   = new Response;
 
-        $session          = new Session;
-        $this->session    = $session->start();
+        $this->session    = new Session;
 
         $this->validation = new Validation;
 

@@ -13,6 +13,7 @@
 */
 
 use Dotenv\Dotenv;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 require_once realpath(__DIR__ . '/../vendor') . '/autoload.php';
 
@@ -29,5 +30,8 @@ require_once realpath(__DIR__ . '/../vendor') . '/autoload.php';
 */
 $dotEnv = Dotenv::createImmutable(realpath(__DIR__ . '/..') . '/');
 $dotEnv->load();
+
+$session = new Session;
+$session->start();
 
 require_once realpath(__DIR__ . '/../bootstrap') . '/app.php';
