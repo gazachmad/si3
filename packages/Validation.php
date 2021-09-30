@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib;
+namespace Packages;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Translation\FileLoader;

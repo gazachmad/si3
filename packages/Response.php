@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib;
+namespace Packages;
 
 use Illuminate\Routing\ResponseFactory;
 
