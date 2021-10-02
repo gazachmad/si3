@@ -4,14 +4,15 @@ namespace App\Core;
 
 class Controller extends Core
 {
-    protected $routeMiddleware = [
-        'auth' => \App\Middleware\Authenticate::class,
+    protected $middlewareAlias = [
+        'auth'     => \App\Middleware\Auth::class,
+        'jwt.auth' => \App\Middleware\JWTAuth::class,
     ];
 
     public function __construct(){
         parent::__construct();
 
-        $this->_runMiddleware();
+        $this->_middlewareRun();
     }
 
     protected function middleware()
@@ -19,7 +20,7 @@ class Controller extends Core
         return [];
     }
 
-    protected function _runMiddleware()
+    protected function _middlewareRun()
     {
         $middlewares = $this->middleware();
         foreach ($middlewares as $middleware) {
@@ -45,7 +46,7 @@ class Controller extends Core
             }
 
             if ($runMiddleware === TRUE) {
-                $className = $this->routeMiddleware[$middlewareName];
+                $className = $this->middlewareAlias[$middlewareName];
                 
                 if (class_exists($className)) {
                     $object = new $className;
