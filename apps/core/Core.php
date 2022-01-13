@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace App\core;
 
 use CI_Controller as BaseCore;
 use Packages\DB;

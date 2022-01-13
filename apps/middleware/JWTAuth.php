@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Middleware;
+namespace App\middleware;
 
-use App\Core\Middleware;
+use App\core\Middleware;
 use Firebase\JWT\JWT;
 
 class JWTAuth extends Middleware

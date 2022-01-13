@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Controller;
+use App\core\Controller;
 
 class Auth extends Controller
 {

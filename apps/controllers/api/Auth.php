@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Controller;
+use App\core\Controller;
 use Carbon\Carbon;
 use Firebase\JWT\JWT;
 use Illuminate\Support\Str;

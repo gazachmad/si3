@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Core;
+namespace App\core;
 
 class Controller extends Core
 {
     protected $middlewareAlias = [
-        'auth'     => \App\Middleware\Auth::class,
-        'jwt.auth' => \App\Middleware\JWTAuth::class,
+        'auth'     => \App\middleware\Auth::class,
+        'jwt.auth' => \App\middleware\JWTAuth::class,
     ];
 
     public function __construct(){

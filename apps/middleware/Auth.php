@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Middleware;
+namespace App\middleware;
 
-use App\Core\Middleware;
+use App\core\Middleware;
 
 class Auth extends Middleware
 {

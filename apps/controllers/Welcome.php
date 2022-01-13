@@ -1,8 +1,8 @@
 <?php
 
-use App\Core\Controller;
+use App\core\Controller;
 
-class Example extends Controller
+class Welcome extends Controller
 {
 
 	/**
@@ -22,6 +22,6 @@ class Example extends Controller
 	 */
 	public function index()
 	{
-		$this->view->render('admin/example/layout-empty');
+		$this->view->render('welcome_message');
 	}
 }
