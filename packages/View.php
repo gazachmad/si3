@@ -23,7 +23,7 @@ class View extends Factory
     private function _initialize()
     {
         parent::addExtension('blade.php', 'blade', function () {
-            return new CompilerEngine(new BladeCompiler(new Filesystem, FCPATH . 'bootstrap/Cache'));
+            return new CompilerEngine(new BladeCompiler(new Filesystem, FCPATH . 'bootstrap/cache'));
         });
     }
 
