@@ -45,26 +45,6 @@ class Model extends Core
                     }
                 }
             })
-            ->when(isset($request->where_in), function ($query) use ($request) {
-                foreach ($request->where_in as $key => $value) {
-                    $query->whereIn($value[0], $value[1]);
-                }
-            })
-            ->when(isset($request->where_not_in), function ($query) use ($request) {
-                foreach ($request->where_not_in as $key => $value) {
-                    $query->whereNotIn($value[0], $value[1]);
-                }
-            })
-            ->when(isset($request->where_between), function ($query) use ($request) {
-                foreach ($request->where_between as $key => $value) {
-                    $query->whereBetween($value[0], $value[1]);
-                }
-            })
-            ->when(isset($request->where_not_between), function ($query) use ($request) {
-                foreach ($request->where_not_between as $key => $value) {
-                    $query->whereNotBetween($value[0], $value[1]);
-                }
-            })
             ->when(isset($request->where_group), function ($query) use ($request) {
                 $query->where(function ($query) use ($request) {
                     foreach ($request->where_group as $key => $value) {
